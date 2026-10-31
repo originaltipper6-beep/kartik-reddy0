@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kartik Reddy | Official VIP Club</title>
+
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1105268002490806');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1105268002490806&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #030712;
+      color: #f8fafc;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* Ambient Background Glows */
+    .bg-mesh {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 10% 40%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.12) 0%, transparent 50%);
+    }
+
+    /* Glassmorphism Effect */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Radiant Luxury CTA Button Animation */
+    @keyframes luxuryGlow {
+      0%, 100% {
+        box-shadow: 0 0 25px rgba(245, 158, 11, 0.65), 0 0 50px rgba(236, 72, 153, 0.4), 0 0 10px rgba(56, 189, 248, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(245, 158, 11, 0.9), 0 0 70px rgba(236, 72, 153, 0.6), 0 0 25px rgba(56, 189, 248, 0.8);
+      }
+    }
+
+    .btn-luxury-radiant {
+      background: linear-gradient(135deg, #FFB800 0%, #FF3D77 50%, #3B82F6 100%);
+      background-size: 200% 200%;
+      animation: luxuryGlow 2.5s infinite alternate, gradientShift 4s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Neon Cyber Circular Dial */
+    .timer-ring-circle {
+      stroke-dasharray: 283;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    /* Shimmer Effect on Profile Border */
+    @keyframes spinGlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .profile-glow-ring {
+      background: conic-gradient(from 0deg, #f59e0b, #ec4899, #38bdf8, #f59e0b);
+      animation: spinGlow 4s linear infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-3 sm:p-4 bg-mesh">
+
+  <!-- Main Mobile Container (Phone Mode View) -->
+  <main class="w-full max-w-[420px] glass-card rounded-[36px] p-6 relative z-10 flex flex-col items-center text-center overflow-hidden">
+
+    <!-- Top Meta Live Activity Indicator -->
+    <div id="toast-pill" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-[11px] font-semibold text-amber-300 mb-5 shadow-inner transition-opacity duration-300">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span id="random-name">Rohan S. (Delhi)</span> just joined VIP
+    </div>
+
+    <!-- DP / Avatar (Handsome Man Portrait with Luxury Neon Border) -->
+    <div class="relative w-28 h-28 mb-4">
+      <div class="absolute inset-0 rounded-full profile-glow-ring p-[3px]">
+        <div class="w-full h-full bg-[#030712] rounded-full p-[2px]">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80"
+            alt="Kartik Reddy"
+            class="w-full h-full object-cover rounded-full"
+            loading="eager"
+          />
+        </div>
+      </div>
+      <!-- Verified Badge Icon -->
+      <div class="absolute bottom-1 right-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full p-1.5 shadow-lg border-2 border-slate-950">
+        <svg class="w-3.5 h-3.5 text-slate-950" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Profile Name & Meta Verified Badge -->
+    <h1 class="font-cinzel text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 tracking-wider mb-1 flex items-center justify-center gap-2">
+      KARTIK REDDY
+    </h1>
+
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 tracking-wide uppercase">
+        Verified Analyst
+      </span>
+      <span class="text-xs font-medium text-slate-400">• 128K+ Members</span>
+    </div>
+
+    <!-- PRIMARY ACTION: Moved Higher for Immediate Tapping -->
+    <div class="w-full mt-1 mb-5">
+      <a
+        id="cta-join"
+        href="https://telegram.me/+x_O6PdUXwB1lNWE9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-luxury-radiant w-full py-4 px-6 rounded-2xl flex items-center justify-between text-white font-extrabold tracking-wide text-base uppercase transform active:scale-95 transition-transform duration-150 group"
+      >
+        <div class="flex items-center gap-3">
+          <!-- Telegram Paper Airplane Icon -->
+          <div class="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-inner">
+            <svg class="w-6 h-6 text-white transform -rotate-12 group-hover:rotate-0 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.97 9.28c-.15.65-.54.81-1.09.5l-3.02-2.23-1.46 1.41c-.16.16-.3.3-.61.3l.22-3.08 5.6-5.06c.24-.22-.05-.34-.38-.13l-6.92 4.36-2.98-.93c-.65-.2-.66-.65.14-.96l11.66-4.5c.54-.2 1.01.12.83.99z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="text-[11px] font-bold text-yellow-200 tracking-widest uppercase">Instant Free Access</div>
+            <div class="text-lg font-black text-white leading-tight">JOIN VIP CHANNEL NOW</div>
+          </div>
+        </div>
+        <div class="bg-black/20 p-2 rounded-xl group-hover:translate-x-1 transition-transform">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- 10-Second High-Tech Cyber Neon Redirect Timer -->
+    <div class="w-full bg-slate-900/60 border border-slate-800 rounded-2xl p-4 mb-4 flex items-center justify-between shadow-inner">
+      <div class="text-left">
+        <div class="flex items-center gap-1.5 mb-0.5">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="text-[11px] font-bold tracking-widest text-cyan-300 uppercase">Auto-Redirect HUD</span>
+        </div>
+        <p class="text-xs text-slate-400 font-medium">Opening secure Telegram channel...</p>
+      </div>
+
+      <!-- Circular SVG Ring Timer -->
+      <div class="relative w-14 h-14 flex items-center justify-center">
+        <svg class="w-14 h-14" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" stroke="#1e293b" stroke-width="8" fill="none" />
+          <defs>
+            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="50%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#ec4899" />
+            </linearGradient>
+          </defs>
+          <circle
+            id="timer-ring"
+            class="timer-ring-circle"
+            cx="50" cy="50" r="45"
+            stroke="url(#neonGradient)"
+            stroke-width="8"
+            fill="none"
+            stroke-linecap="round"
+          />
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span id="countdown" class="text-base font-black text-white font-cinzel">10</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information & Guarantee Text Block (Placed Below) -->
+    <div class="w-full text-slate-400 text-xs space-y-2 border-t border-slate-800/80 pt-3">
+      <div class="flex items-center justify-center gap-1.5 text-slate-300 font-semibold text-[13px]">
+        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>100% Free VIP Lifetime Access</span>
+      </div>
+      <p class="leading-relaxed text-[11px] text-slate-400">
+        Direct official channel link provided by Kartik Reddy. Click the button above if auto-redirect doesn't open in 10 seconds.
+      </p>
+      <div class="flex items-center justify-center gap-4 text-[10px] text-slate-500 pt-1 uppercase tracking-wider font-bold">
+        <span>🔒 256-Bit SSL</span>
+        <span>•</span>
+        <span>⚡ Instant Join</span>
+        <span>•</span>
+        <span>💎 VIP Verified</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const TARGET_URL = "https://telegram.me/+x_O6PdUXwB1lNWE9";
+    const TOTAL_SECONDS = 10;
+    let secondsLeft = TOTAL_SECONDS;
+
+    const countdownEl = document.getElementById('countdown');
+    const timerRing = document.getElementById('timer-ring');
+    const ctaBtn = document.getElementById('cta-join');
+    const circumference = 2 * Math.PI * 45; // r = 45 => ~282.74
+
+    // Fire Meta Lead Event & Redirect
+    function triggerRedirection() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', {
+          content_name: 'Kartik Reddy VIP Channel',
+          status: 'redirected'
+        });
+      }
+      window.location.href = TARGET_URL;
+    }
+
+    // Manual Click Handler
+    ctaBtn.addEventListener('click', function(e) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', {
+          content_name: 'Kartik Reddy VIP Channel',
+          status: 'clicked'
+        });
+      }
+    });
+
+    // Countdown Interval
+    const countdownInterval = setInterval(() => {
+      secondsLeft--;
+      if (countdownEl) {
+        countdownEl.innerText = secondsLeft;
+      }
+
+      // Update circular dash offset
+      if (timerRing) {
+        const offset = circumference - ((TOTAL_SECONDS - secondsLeft) / TOTAL_SECONDS) * circumference;
+        timerRing.style.strokeDashoffset = offset;
+      }
+
+      if (secondsLeft <= 0) {
+        clearInterval(countdownInterval);
+        triggerRedirection();
+      }
+    }, 1000);
+
+    // Live Social Proof Switcher
+    const names = [
+      "Aman K. (Mumbai)",
+      "Vikram S. (Jaipur)",
+      "Rahul M. (Bangalore)",
+      "Deepak T. (Lucknow)",
+      "Sameer P. (Hyderabad)"
+    ];
+    let nameIdx = 0;
+    const toastPill = document.getElementById('toast-pill');
+    const nameEl = document.getElementById('random-name');
+
+    setInterval(() => {
+      if (toastPill && nameEl) {
+        toastPill.style.opacity = '0';
+        setTimeout(() => {
+          nameIdx = (nameIdx + 1) % names.length;
+          nameEl.textContent = names[nameIdx];
+          toastPill.style.opacity = '1';
+        }, 300);
+      }
+    }, 2800);
+  </script>
+</body>
+</html>
